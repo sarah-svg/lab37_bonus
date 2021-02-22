@@ -1,6 +1,6 @@
 import { findUser, FIND_USER } from './FindUser';
 
-describe('find user action', () => {
+describe.skip('find user action', () => {
   it('finds a specific user', () => {
 
     const action = findUser({
