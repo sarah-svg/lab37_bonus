@@ -1,6 +1,6 @@
 import { searchUser, SEARCH_USER } from './searchUser';
 
-describe.skip(' search user', () => {
+describe(' search user', () => {
   it('searches for a specific user', () => {
     const action = searchUser({ search: 'lab24' });
 
