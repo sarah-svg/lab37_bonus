@@ -4,7 +4,7 @@ export const initialState = {
   users: [],
 };
 
-export default function reducer(state = initialState, action) {
+const reducer = (state = initialState, action) => {
   const { users }  = state;
   switch(action.type) {
     case FIND_USER:
@@ -16,4 +16,6 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 
-}
+};
+export default reducer;
+

@@ -1,5 +1,11 @@
 import React from 'react';
+import UserPage from '../../containor/Page';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <UserPage />
+    </>
+
+  );
 }
