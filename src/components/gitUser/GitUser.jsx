@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
-function GitUser({  username, followers, following, url }) {
+const GitUser = () => {
+  const newUser = useSelector(state => state.users);
   return (
-    <div>
-      <p> {username}</p>
-      <p>{followers}</p>
-      <p>{following}</p>
-      <p>{url}</p>
+    <div data-testid="gitUser">
+      <p> {newUser.name}</p>
+      <p>{newUser.followers}</p>
+      <p>{newUser.following}</p>
+      <a href={newUser.profileLink}>
+        Github User Link: {newUser.profileLink}</a>
     </div>
   );
-}
+};
 
 GitUser.propTypes = {
-  username: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   followers: PropTypes.string.isRequired,
   following: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  profileLink: PropTypes.string.isRequired
 };
 
 export default GitUser;
