@@ -1,8 +1,9 @@
 import { findUser } from '../actions/FindUser';
 import { searchUser } from '../actions/searchUser';
+import { setRepo } from '../actions/setRepo';
 import reducer from './gitUserReducer';
 
-describe('git user reducer', () => {
+describe.only('git user reducer', () => {
   it('checks to make sure the reducer is working with FIND_USER', () => {
     const state = {
       users: {},
@@ -36,5 +37,32 @@ describe('git user reducer', () => {
       search: 'Sarah',
       repos: []
     });
+  });
+  it('tests the redure for repos', () => {
+    const state = {
+      users: {},
+      search: '',
+      repos: []
+    };
+    const action = setRepo([
+      { repos: 'lab-01' },
+      { repos: 'lab-02' }
+    ]);
+    const newState = reducer(state, action);
+    expect(newState).toEqual({
+      users: {},
+      search: '',
+      repos: [
+        { repos: 'lab-01' },
+        { repos: 'lab-02' }
+      ]
+    });
 
-  }); });
+
+  });
+
+
+
+
+
+});
