@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { findUser } from '../../actions/FindUser';
+import { findUser } from '../../actions/findUser';
 import { searchUser } from '../../actions/searchUser';
 import { setRepo } from '../../actions/setRepo';
 

@@ -1,4 +1,4 @@
-import { FIND_USER } from '../actions/FindUser';
+import { FIND_USER } from '../actions/findUser';
 import { SEARCH_USER } from '../actions/searchUser';
 import { SET_REPO } from '../actions/setRepo';
 
