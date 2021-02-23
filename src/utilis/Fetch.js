@@ -13,9 +13,9 @@ export const gitHubUser = async(search) => {
 export const userRepos = async(search) => {
   return fetch(`https://api.github.com/users/${search}/repos`)
     .then(res => res.json())
-    .then(json => json.map(repo => ({
-      id: repo.id,
-      name: repo.name,
-      url: repo.url
+    .then(json => json.map(repos => ({
+      id: repos.id,
+      name: repos.name,
+      url: repos.url
     })));
 };

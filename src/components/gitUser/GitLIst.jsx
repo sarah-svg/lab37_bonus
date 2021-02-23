@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import uuid from 'react-uuid';
 
 const GitList = () => {
   const repoList = useSelector(state => state.repos);
-
-  const repoElements = repoList.map(repo => {
-    return <div data-testid="user-div" key={repo.id}>
-      <h3>Repo Name: {repo.name}</h3>
-      <a href={repo.url}>Repo Url: {repo.url}</a>
-    </div>;
+  console.log(repoList);
+  const repoElements = repoList.map(repos => {
+    return      <li key={uuid()} data-testid="user">
+      <h3>Repo Name: {repos.name}{repos.id}</h3>
+      <a href={repos.url}>Repo Url: {repos.url}</a>
+    </li>;
   });
-
+ 
   return (
     <ul data-testid="repo-list">
       {repoElements}
