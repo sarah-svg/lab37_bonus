@@ -1,16 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { getUser } from '../../selector/user';
 import uuid from 'react-uuid';
-import GitUser from './GitUser';
 
 const GitList = () => {
-  const users = useSelector(getUser);
-  const allUser = users.map((user) => { 
-    <li key={uuid()}>
-      <GitUser {...user}/>
-    </li>;});
-  return <ul>{allUser}</ul>;
+  const repoList = useSelector(state => state.repos);
+  console.log(repoList);
+  const repoElements = repoList.map(repos => {
+    return      <li key={uuid()} data-testid="user">
+      <h3>Repo Name: {repos.name}{repos.id}</h3>
+      <a href={repos.url}>Repo Url: {repos.url}</a>
+    </li>;
+  });
+ 
+  return (
+    <ul data-testid="repo-list">
+      {repoElements}
+    </ul>
+  );
+};
+
+GitList.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 };
 
 export default GitList;

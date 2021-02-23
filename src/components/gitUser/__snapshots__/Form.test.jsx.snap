@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component renders UsernameForm 1`] = `
+<DocumentFragment>
+  <form>
+    <label>
+      Enter a user name on Github
+      <textarea
+        placeholder="username"
+      />
+    </label>
+    <button>
+      Enter
+    </button>
+  </form>
+</DocumentFragment>
+`;

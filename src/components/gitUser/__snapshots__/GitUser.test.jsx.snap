@@ -3,13 +3,17 @@
 exports[`git user component renders to git user page 1`] = `
 <DocumentFragment>
    
-  <div>
+  <div
+    data-testid="gitUser"
+  >
     <p>
-       sarah-svg
+       
     </p>
     <p />
     <p />
-    <p />
+    <a>
+      Github User Link: 
+    </a>
   </div>
 </DocumentFragment>
 `;

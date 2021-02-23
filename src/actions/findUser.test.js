@@ -1,4 +1,4 @@
-import { findUser, FIND_USER } from './FindUser';
+import { findUser, FIND_USER } from './findUser';
 
 describe('find user action', () => {
   it('finds a specific user', () => {
