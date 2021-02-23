@@ -1,39 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { findUser } from '../../actions/FindUser';
-import { getUser } from '../../selector/user';
+import { searchUser } from '../../actions/searchUser';
+import { setRepo } from '../../actions/setRepo';
+
 
 const Form = () => {
   const dispatch = useDispatch();
-  const users = useSelector(getUser);
+  const search = useSelector(state => state.search);
 
-  const [username, setUserName] = useState('');
-  const [followers, setFollowers] = useState('');
-  const [following, setFollowing] = useState('');
-  const [url, setUrl] = useState('');
-
+  const handleChange = ({ target }) => {
+    dispatch(searchUser(target.value));
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(findUser({ username, followers, following, url }));
-    setUserName('');
-    setFollowers('');
-    setFollowing('');
-    setUrl('');
+    dispatch(findUser(search));
+    dispatch(setRepo(search));
   };
-  
-  return (
-    <>
-      <title>Search for a Github user</title>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="username"
-          value={username}
-          onChange={({ target }) => setUserName(target.value)} />
 
-        <button>Find user</button>
-      </form>
-    </>
+  // eslint-disable-next-line keyword-spacing
+  return(
+    <form onSubmit={handleSubmit}>
+      <label>
+        Enter a user name on Github
+        <textarea onChange={handleChange}
+          placeholder="username">
+        </textarea>
+      </label>
+      <button>Enter</button>
+    </form>
   );
 
 };
