@@ -7,6 +7,7 @@ const GitUser = () => {
   return (
     <div data-testid="gitUser">
       <p> {newUser.name}</p>
+      <p>{newUser.id}</p>
       <p>{newUser.followers}</p>
       <p>{newUser.following}</p>
       <a href={newUser.profileLink}>

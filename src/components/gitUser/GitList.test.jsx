@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { render, cleanup } from '@testing-library/react';
-import GitList from './GitLIst';
+import GitList from './GitList';
 import store from '../../store';
 
 describe('git list component', () => {
