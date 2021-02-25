@@ -4,6 +4,9 @@ import { render, cleanup } from '@testing-library/react';
 import GitList from './GitList';
 import store from '../../store';
 
+
+
+
 describe('git list component', () => {
   beforeEach(() => cleanup());
   it('test the git list page', () => {
