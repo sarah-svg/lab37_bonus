@@ -6,14 +6,21 @@ exports[`git user component renders to git user page 1`] = `
   <div
     data-testid="gitUser"
   >
+    <img />
     <p>
-       
+      Name:
     </p>
-    <p />
-    <p />
-    <p />
+    <p>
+      Git-Id:
+    </p>
+    <p>
+      Followers:
+    </p>
+    <p>
+      Following:
+    </p>
     <a>
-      Github User Link: 
+      Github User Link:
     </a>
   </div>
 </DocumentFragment>
