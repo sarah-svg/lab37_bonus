@@ -11,6 +11,7 @@ exports[`git user component renders to git user page 1`] = `
     </p>
     <p />
     <p />
+    <p />
     <a>
       Github User Link: 
     </a>

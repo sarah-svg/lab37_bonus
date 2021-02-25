@@ -1,13 +1,21 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
-import uuid from 'react-uuid';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { gitHubUser } from '../../utilis/Fetch';
+// import uuid from 'react-uuid';
+// {uuid()}
 const GitList = () => {
+  
+
   const repoList = useSelector(state => state.repos);
+
+ 
+
   console.log(repoList);
+  
   const repoElements = repoList.map(repos => {
-    return      <li key={uuid()} data-testid="user">
+    return <li key={repos.id} data-testid="user">
       <h3>Repo Name: {repos.name}{repos.id}</h3>
       <a href={repos.url}>Repo Url: {repos.url}</a>
     </li>;

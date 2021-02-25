@@ -1,16 +1,17 @@
 // https://api.github.com/users/:username
-export const gitHubUser = async(search) => {
-  return fetch(`https://api.github.com/users/${search}`)
-    .then(res => res.json())
-    .then(json => ({
-      name: json.name,
-      followers: json.followers,
-      following: json.following,
-      profileLink: json.html_url
-    }));
+export const gitHubUser = (search) => {
+
+  return  fetch(`https://api.github.com/users/${search}`)
+  
+    .then(res => res.json());
+  // .then (console.log);
+
 };
 
-export const userRepos = async(search) => {
+
+
+
+export const userRepos = (search) => {
   return fetch(`https://api.github.com/users/${search}/repos`)
     .then(res => res.json())
     .then(json => json.map(repos => ({
