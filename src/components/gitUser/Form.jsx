@@ -8,13 +8,11 @@ import { gitHubUser } from '../../utilis/Fetch';
 import styles from './Form.css';
 
 const Form = () => {
-
   const dispatch = useDispatch();
   const search = useSelector(state => state.search);
   const handleChange = ({ target }) => {
 
     dispatch(searchUser(target.value));
-
   };
   const handleSubmit = async(e) => {
     e.preventDefault();
