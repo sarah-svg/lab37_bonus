@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import SearchRepos from './searchRepos';
 import styles from './Git.css';
 
 const GitUser = () => {
