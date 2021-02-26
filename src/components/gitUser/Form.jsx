@@ -5,7 +5,7 @@ import { findUser } from '../../actions/findUser';
 import { searchUser } from '../../actions/searchUser';
 import { setRepo } from '../../actions/setRepo';
 import { gitHubUser } from '../../utilis/Fetch';
-
+import styles from './Form.css';
 
 const Form = () => {
 
@@ -25,7 +25,7 @@ const Form = () => {
   };
   // eslint-disable-next-line keyword-spacing
   return(
-    <form onSubmit={handleSubmit}>
+    <form className={styles.Form} onSubmit={handleSubmit}>
       <label>
         Enter a user name on Github
         <textarea onChange={handleChange}

@@ -1,0 +1,8 @@
+.Form {
+    display: flex;
+    width: 100px;
+    flex-direction: column; 
+}
+.button {
+    size: 2rem;
+}
