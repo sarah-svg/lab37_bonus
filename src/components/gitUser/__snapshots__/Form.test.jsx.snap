@@ -2,7 +2,9 @@
 
 exports[`Form component renders UsernameForm 1`] = `
 <DocumentFragment>
-  <form>
+  <form
+    class="Form"
+  >
     <label>
       Enter a user name on Github
       <textarea

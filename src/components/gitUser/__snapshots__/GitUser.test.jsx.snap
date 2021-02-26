@@ -4,16 +4,32 @@ exports[`git user component renders to git user page 1`] = `
 <DocumentFragment>
    
   <div
+    class="Git"
     data-testid="gitUser"
   >
+    <img />
     <p>
-       
+      Name:
     </p>
-    <p />
-    <p />
-    <p />
+    <p>
+      Bio:
+    </p>
+    <p>
+      Git-Id:
+    </p>
+    <p>
+      Followers:
+    </p>
+    <p>
+      Following:
+    </p>
     <a>
-      Github User Link: 
+      Github User Link:
+    </a>
+    <br />
+    <br />
+    <a>
+      User Repos
     </a>
   </div>
 </DocumentFragment>
